@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.nav-links {
+    margin-top: 50px; 
+    margin-right: 80px; 
+  }
+
+  nav a {
+    color: white !important;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  nav a:hover {
+    color: #ddd !important;
+    text-decoration: underline;
+  }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jura', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+   .logo {
+    height: 40px;
+    margin-top: 50px;
+  }
+
+  .hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Nova div com imagem de fundo */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagens/hero.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Conteúdo sobre o fundo */
+nav,
+.hero-title {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+.hero-title {
+  font-family: 'Josefin Slab', sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+
+
+/* Seção de conteúdo inferior */
+.info-section {
+  background: rgba(180, 155, 44, 0.25);
+  font-family: 'Jura', sans-serif;
+  color: #000000;
+  font-size: 1.2rem;
+  min-height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+}
+
+/* Colunas dentro da info-section */
+.info-section .col-md-6 {
+  flex: 1 1 100%;
+  padding: 1rem;
+}
+
+/* Linha vertical apenas em telas médias ou maiores */
+@media (min-width: 768px) {
+  .info-section .col-md-6 {
+    flex: 1;
+  }
+
+  .info-section .col-md-6:first-child {
+    border-right: 2px solid #000000;
+  }
+}
+
+/* Slogan */
+.slogan {
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+  text-align: center;
+  font-weight: 300;
+  padding: 20px;
+  color: #000000;
+}
+
+/* Ajuste de slogan em telas menores */
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    padding: 15px;
+  }
+}
+
+.highlight {
+  color: #686931;
+  font-weight: 600;
+}
+
+/* Título Trabalhos Remotos */
+.section-title,
+.info-section h5 {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Caixa com links de trabalhos */
+.remote-jobs-box {
+  font-size: 20px;
+  font-family: 'Jura', sans-serif;
+  position: relative;
+  line-height: 22px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Ajuste de listas */
+.remote-jobs-box ul {
+  list-style: none;
+  padding: -30px;
+  margin-left: 50px;
+}
+
+/* Cantos decorativos */
+.remote-jobs-box::before,
+.remote-jobs-box::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+/* canto superior esquerdo */
+.remote-jobs-box::before {
+  top: -12px;
+  left: 350px;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+}
+
+/* cantos direitos */
+.remote-jobs-box .corner-top-right,
+.remote-jobs-box .corner-bottom-right {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+}
+
+/* canto inferior direito */
+.remote-jobs-box .corner-bottom-right {
+  bottom: 5px;
+  right: 310px;
+  border-bottom: 10px solid black;
+  border-right: 10px solid black;
+}
+
+
+/* Seção Acomodação */
+.acomodacao-section {
+  width: 100%;
+  height: 80vh;
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acomodacao-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0; 
+  padding: 0;
+}
+
+.image-side {
+  flex: 0.45;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
+}
+
+.content-side {
+  flex: 0.55;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 3rem;
+}
+
+.content-wrapper {
+  text-align: center;
+}
+
+.content-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.descobrir-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.descobrir-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Botão Scroll Up */
+.scroll-top-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);  
+  color: rgb(0, 0, 0);  
+  border: 2px solid white !important;  
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 10; 
+}
+
+/* Para o hover */
+.scroll-top-btn:hover {
+  background-color: black;  
+  color: white;  
+  border: 2px solid white;  
+}
+
+
+
+/* LOCAIS Section */
+.locais-section {
+  width: 100%;
+  height: 80vh; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.locais-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.locais-content-side {
+  flex: 1;
+  background-color: rgba(180, 155, 44, 0.25); 
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.locais-image-side {
+  flex: 1;
+  overflow: hidden;
+}
+
+.locais-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botão Scroll Up dentro do lado esquerdo */
+.locais-content-side .scroll-top-btn {
+  position: absolute;
+  left: 40px; 
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.locais-content-side .scroll-top-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+/* Botão Explorar */
+.discover-btn-light {
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 10px 30px;
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.discover-btn-light:hover {
+  background: black;
+  color: white;
+}
+
+/* Texto */
+.section-text {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+
+
+/*BLOG Section */
+.blog-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagem de fundo da seção */
+.blog-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagens/pexels-thepaintedsquare-583848 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Botão BLOG no centro */
+.blog-btn {
+  position: relative;
+  z-index: 2;
+  padding: 15px 150px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 45px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.blog-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Botão Scroll Up encostado à direita embaixo */
+.scroll-top-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.scroll-top-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-color: rgb(255, 255, 255);
+}
+
+
+
+/*Footer */
+.footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-title {
+  font-size: 35px;
+  margin-bottom: 2rem;
+  letter-spacing: 0px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons img {
+  width: 60px; 
+  height: 60px;
+  object-fit: contain;
+}
+
+.footer-subtitle {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* Media Queries para telas pequenas */
+@media (max-width: 768px) {
+  body, html {
+    font-size: 18px; /* Menor fonte para telas menores */
+  }
+
+  .nav-links {
+    margin-top: 30px;
+    margin-right: 40px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-section {
+    padding: 1rem;
+  }
+
+  .info-section .col-md-6 {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+
+  /* Ajuste no slogan para telas pequenas */
+  .slogan {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    padding: 15px;
+  }
+
+  /* Ajustar os cantos decorativos em telas menores */
+  .remote-jobs-box::before,
+  .remote-jobs-box::after {
+    display: none; /* Esconde cantos decorativos para telas pequenas */
+  }
+
+  .remote-jobs-box {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .remote-jobs-box ul {
+    margin-left: 0;
+  }
+
+  .acomodacao-container {
+    flex-direction: column;
+  }
+
+  .image-side, .content-side {
+    flex: 1 1 100%;
+  }
+
+  .acomodacao-section {
+    height: 60vh;
+  }
+
+  /* Ajuste nas imagens e conteúdo em dispositivos móveis */
+  .locais-container {
+    flex-direction: column;
+  }
+
+  .locais-content-side, .locais-image-side {
+    flex: 1 1 100%;
+  }
+
+  /* Ajuste nos botões */
+  .descobrir-btn,
+  .discover-btn-light {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-icons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-subtitle {
+    font-size: 12px;
+  }
+}
+
+/* Media Queries para telas muito pequenas (dispositivos móveis muito pequenos) */
+@media (max-width: 480px) {
+  body, html {
+    font-size: 16px; /* Tamanho de fonte ainda menor */
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .hero-title h1 {
+    font-size: 2rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    padding: 10px;
+  }
+
+  .remote-jobs-box {
+    padding: 0.5rem;
+  }
+
+  .descobrir-btn,
+  .discover-btn-light {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-subtitle {
+    font-size: 10px;
+  }
+}
