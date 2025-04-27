@@ -1,49 +1,45 @@
-/* Reset básico */
+/* Reset */
 body {
   margin: 0;
-  min-height: 100vh;
   font-family: 'Josefin Slab', serif;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* Fundo com imagem */
+/* Fundo */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('imagens/pexels-jeremy-bishop-1260133-20146347-2.png');
+  inset: 0;
+  background-image: url('imagens/pexels-jeremy-bishop-1260133-20146347 2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -2;
 }
 
-/* Camada escura */
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
 /* Navegação */
-.nav-links {
-  margin-top: 50px;
-  margin-right: 80px;
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 nav a {
   color: white !important;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5rem;
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
 nav a:hover {
@@ -53,51 +49,48 @@ nav a:hover {
 
 .logo {
   height: 40px;
-  margin-top: 50px;
 }
 
 /* Formulário */
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
 form {
   background-color: black;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 35px;
   backdrop-filter: blur(8px);
-  min-height: 700px;
   font-family: 'Jura', sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-left: 20px;
-  margin-top: 50px;
+  margin: 0;
 }
 
-.form-container {
-  max-width: 460px;
-  width: 100%;
-  border-radius: 25px;
-  justify-content: flex-start;
-}
-
+/* Inputs */
 .form-control {
-  padding-top: 1.2rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
   border-radius: 15px;
 }
 
-/* Botão de envio */
+/* Botão envio */
 .discover-btn-light {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  text-align: center;
   border: 2px solid white;
   border-radius: 35px;
-  padding: 22px 130px;
-  background-color: transparent;
+  padding: 1rem 3rem;
+  background: transparent;
   color: white;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  text-decoration: none;
+  margin-top: 2rem;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .discover-btn-light:hover {
@@ -106,38 +99,36 @@ form {
 }
 
 /* Frase */
-.quote-text {
-  font-size: 25px;
+.quote-text, .quote-author {
   color: white;
   font-family: 'Jura', sans-serif;
   text-align: right;
-  margin-right: 100px;
+  margin-right: 1rem;
+}
+
+.quote-text {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .quote-author {
-  font-size: 15px;
-  color: white;
-  font-family: 'Jura', sans-serif;
-  text-align: right;
-  margin-right: 100px;
-  font-weight: normal;
+  font-size: 1rem;
 }
 
+/* Container frase */
 .frase-container {
-  position: absolute;
-  top: 25%;
-  right: 0;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
 }
 
-/* Overlay de alerta */
+/* Overlay */
 .overlay-alert {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
   display: flex;
@@ -156,7 +147,6 @@ form {
   max-width: 90%;
 }
 
-/* Botão OK */
 .ok-btn {
   margin-top: 1rem;
   padding: 0.5rem 2rem;
@@ -174,34 +164,66 @@ form {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .quote-text {
-    font-size: 20px;
-    margin-right: 50px;
+@media (max-width: 992px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .quote-author {
-    font-size: 12px;
-    margin-right: 50px;
+  .quote-text, .quote-author {
+    text-align: center;
+    margin-right: 0;
   }
 
   .frase-container {
-    top: 30%;
+    position: relative;
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  form {
+    padding: 2rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .discover-btn-light {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
   .quote-text {
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 1.2rem;
   }
 
   .quote-author {
-    font-size: 10px;
-    margin-right: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .quote-text, .quote-author {
+    text-align: center;
+    margin-right: 0;
   }
 
   .frase-container {
-    top: 35%;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 2rem;
+    align-items: center;
   }
 }

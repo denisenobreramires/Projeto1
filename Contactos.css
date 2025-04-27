@@ -1,227 +1,171 @@
 body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: 'Jofin Slab', serif;
-    position: relative;
-    overflow-x: hidden;
-  }
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Josefin Slab', serif;
+  overflow-x: hidden;
+}
 
-  .nav-links {
-    margin-top: 50px; 
-    margin-right: 80px; 
-  }
+/* Hero/Nav */
+nav {
+  flex-wrap: wrap;
+}
 
-  nav a {
-    color: white !important;
-    font-weight: 500;
-    font-size: 25px;
-  }
+.nav-links {
+  margin-top: 0;
+  margin-right: 0;
+  display: flex;
+  gap: 1.5rem;
+}
 
-  nav a:hover {
-    color: #ddd !important;
-    text-decoration: underline;
-  }
+nav a {
+  color: white !important;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
 
-  /* Imagem de fundo */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('imagens/pexels-jeremy-bishop-1260133-20146347\ 2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -2;
-  }
+nav a:hover {
+  color: #ddd !important;
+  text-decoration: underline;
+}
 
-  /* Overlay */
-  body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    z-index: -1;
-  }
+.logo {
+  height: 40px;
+}
 
-  .logo {
-    height: 40px;
-    margin-top: 50px;
-  }
+/* Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('imagens/pexels-jeremy-bishop-1260133-20146347\ 2.png') center/cover no-repeat;
+  z-index: -2;
+}
 
-  /* Estilo Formulario */
-  form {
-    background-color: rgb(0, 0, 0);
-    padding: 4rem; 
-    border-radius: 35px;
-    backdrop-filter: blur(8px);
-    min-height: 700px; 
-    font-family: 'Jura', sans-serif; 
-    font-size: 20px; 
-    font-weight: bold;
-    margin-left: 20px; 
-    margin-top: 50px; 
-  }
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
 
-  .form-container {
-    max-width: 460px; 
-    width: 100%;
-    border-radius: 25px;
-    justify-content: flex-start; 
-  }
+/* Formulário */
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
 
-  /* Aumentar o tamanho do preenchimento do input */
-  .form-control {
-    padding-top: 1.2rem;
-    padding-bottom: 1.5rem;
-    border-radius: 15px;
-  }
-
-  /* Estilo do botão ENVIAR Form */
-  .discover-btn-light {
-    border: 2px solid white;
-    border-radius: 35px;
-    padding: 22px 130px;
-    background-color: transparent;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    margin-top: 50px; 
-    margin-bottom: 50px; 
-  }
-
-  /* Botão enviar mouse (hover) */
-  .discover-btn-light:hover {
-    background-color: white;
-    color: black;
-  }
-
-  /* Estilo da frase à direita */
-  .quote-text {
-  font-size: 25px;
-  color: white;
+form {
+  background-color: rgb(0, 0, 0);
+  padding: 3rem;
+  border-radius: 35px;
+  backdrop-filter: blur(8px);
   font-family: 'Jura', sans-serif;
-  text-align: right;
-  margin-right: 100px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
-/* Autor */
-.quote-author {
-  font-size: 15px;
+/* Inputs */
+.form-control {
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+  border-radius: 15px;
+}
+
+/* Botão */
+.discover-btn-light {
+  border: 2px solid white;
+  border-radius: 35px;
+  padding: 1rem 3rem;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.discover-btn-light:hover {
+  background: white;
+  color: black;
+}
+
+/* Frase */
+.quote-text, .quote-author {
   color: white;
   font-family: 'Jura', sans-serif;
   text-align: right;
-  margin-right: 100px;
-  font-weight: normal;
+  margin-right: 1rem;
 }
 
-/* Contêiner opcional para posicionamento */
+.quote-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.quote-author {
+  font-size: 1rem;
+}
+
+/* Container frase */
 .frase-container {
-  position: absolute;
-  top: 25%;
-  right: 0;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
 }
 
+/* --------- MEDIA QUERIES --------- */
 
-/* Media Queries para telas pequenas (máximo 768px) */
+/* Tablets */
 @media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+  
   .nav-links {
-    margin-top: 30px;
-    margin-right: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  nav a {
-    font-size: 20px;
-  }
-
-  form {
-    padding: 3rem;
-    min-height: 600px;
-    margin-left: 10px;
-  }
-
-  .form-container {
-    max-width: 90%;
-  }
-
-  .form-control {
-    padding-top: 1rem;
-    padding-bottom: 1.2rem;
-  }
-
-  .discover-btn-light {
-    padding: 18px 100px;
-    font-size: 18px;
-  }
-
-  .quote-text {
-    font-size: 20px;
-    margin-right: 50px;
-  }
-
-  .quote-author {
-    font-size: 12px;
-    margin-right: 50px;
+  .quote-text, .quote-author {
+    text-align: center;
+    margin-right: 0;
   }
 
   .frase-container {
-    top: 30%;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 2rem;
+    align-items: center;
   }
 }
 
-/* Media Queries para telas muito pequenas (máximo 480px) */
+/* Mobile */
 @media (max-width: 480px) {
-  .nav-links {
-    margin-top: 20px;
-    margin-right: 20px;
-  }
-
-  nav a {
-    font-size: 18px;
-  }
-
   form {
     padding: 2rem;
-    min-height: 500px;
-    margin-left: 0;
-    margin-top: 30px;
-  }
-
-  .form-container {
-    max-width: 100%;
-  }
-
-  .form-control {
-    padding-top: 0.8rem;
-    padding-bottom: 1rem;
   }
 
   .discover-btn-light {
-    padding: 15px 80px;
-    font-size: 16px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 
   .quote-text {
-    font-size: 18px;
-    margin-right: 20px;
+    font-size: 1.2rem;
   }
 
   .quote-author {
-    font-size: 10px;
-    margin-right: 20px;
-  }
-
-  .frase-container {
-    top: 35%;
+    font-size: 0.9rem;
   }
 }
