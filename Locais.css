@@ -22,7 +22,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Imagem de fundo */
 body::before {
     content: "";
     position: fixed;
@@ -37,7 +36,6 @@ body::before {
     z-index: -2;
 }
 
-/* Camada escura */
 body::after {
     content: "";
     position: fixed;
@@ -56,7 +54,7 @@ body::after {
 
 .form-container {
     background-color: #D9D9D9;
-    padding: 2rem; /* reduzido */
+    padding: 2rem;
     border-radius: 35px;
     backdrop-filter: blur(8px);
     min-height: 600px;
@@ -66,63 +64,59 @@ body::after {
     font-weight: bold;
     margin-top: 50px;
     margin-left: 450px;
-    width: 455px; /* ADICIONADO: define largura fixa */
-
+    width: 455px;
 }
 
 .form-container form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    margin-top: 30px; /* Aumenta o espaço entre o topo e o formulário */
-    }
+    align-items: center;
+    margin-top: 30px;
+}
 
-/* Aumentar o tamanho do preenchimento do input */
-  .form-control {
+.form-control {
     padding-top: 1.2rem;
     padding-bottom: 1.5rem;
     border-radius: 15px;
     font-weight: bolder !important;
-    color: #000000; /* texto digitado nos inputs */
-    background-color: rgba(255, 255, 255, 0.1); /* para melhorar contraste, opcional */
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid #000000;
 }
 
-    .form-select {
-    height: 80px;          /* define uma altura fixa */
-    width: 320px;         /* define uma largura fixa */
+.form-select {
+    height: 80px;
+    width: 320px;
     font-family: 'Jura', sans-serif;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 15px;   /* mantém o visual arredondado */
-    padding: 10px 15px;    /* espaço interno para conforto visual */
+    border-radius: 15px;
+    padding: 10px 15px;
 }
 
 form label {
-  font-family: 'Jura', sans-serif;
-  font-size: 25px;
-  font-weight: bold;
+    font-family: 'Jura', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .botao-ver {
-  background-color: #686931 !important;
-  color: rgb(0, 0, 0) !important;
-  font-size: 25px !important;
-  font-weight: bold !important;
-  font-family: 'Jura', sans-serif !important;
-  padding: 20px 140px !important;
-  border: none !important;
-  border-radius: 20px !important;
-  transition: background-color 0.3s ease !important;
+    background-color: #686931 !important;
+    color: rgb(0, 0, 0) !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    font-family: 'Jura', sans-serif !important;
+    padding: 20px 140px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    transition: background-color 0.3s ease !important;
 }
 
 .botao-ver:hover {
-  background-color: #333333 !important;
-  color: #fff !important;
+    background-color: #333333 !important;
+    color: #fff !important;
 }
 
-
-/* Estilo da caixa de texto */
 .caixa-texto {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -130,16 +124,14 @@ form label {
     font-family: 'Jura', sans-serif;
     font-size: 20px;
     margin-top: 10px;
-    text-align: right; /* Alinha o texto à direita */
+    text-align: right;
 }
 
-/* Layout principal */
 .container-fluid {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-
 
 .content-direita {
     display: flex;
@@ -147,21 +139,97 @@ form label {
     align-items: center;
 }
 
-
-/* Imagem */
 .content-direita img {
     width: 460px;
     height: 360px;
-    margin-bottom: 20px; /* pequeno espaço entre imagem e o texto */
+    margin-bottom: 20px;
 }
 
-/* Caixa de texto */
 .content-direita .caixa-texto {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     color: white;
     font-family: 'Jura', sans-serif;
     font-size: 20px;
-    text-align: left; /* alinha o texto para a esquerda */
-    max-width: 460px; /* opcional: para o texto não ultrapassar a largura da imagem */
+    text-align: left;
+    max-width: 460px;
+}
+
+@media (max-width: 1024px) {
+    .form-container {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .container-fluid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-select {
+        width: 90%;
+    }
+
+    .botao-ver {
+        padding: 20px 50px;
+    }
+
+    .content-direita img {
+        width: 100%;
+        max-width: 460px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        margin-top: 20px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .container-fluid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-select {
+        width: 90%;
+    }
+
+    .botao-ver {
+        padding: 20px 50px;
+    }
+
+    .content-direita img {
+        max-width: 100%;
+    }
+
+    .caixa-texto {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 20px;
+    }
+
+    .botao-ver {
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
 }
