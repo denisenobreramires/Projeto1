@@ -66,15 +66,15 @@ body::after {
     font-weight: bold;
     margin-top: 50px;
     margin-left: 650px;
-    width: 455px; 
+    width: 455px; /* ADICIONADO: define largura fixa */
 
 }
 
 .form-container form {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    margin-top: 30px; 
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 30px; /* Aumenta o espaço entre o topo e o formulário */
     }
 
 /* Aumentar o tamanho do preenchimento do input */
@@ -83,19 +83,19 @@ body::after {
     padding-bottom: 1.5rem;
     border-radius: 15px;
     font-weight: bolder !important;
-    color: #000000; 
-    background-color: rgba(255, 255, 255, 0.1); 
+    color: #000000; /* texto digitado nos inputs */
+    background-color: rgba(255, 255, 255, 0.1); /* para melhorar contraste, opcional */
     border: 1px solid #000000;
 }
 
     .form-select {
-    height: 80px;          
-    width: 320px;         
+    height: 80px;          /* define uma altura fixa */
+    width: 320px;         /* define uma largura fixa */
     font-family: 'Jura', sans-serif;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 15px;   
-    padding: 10px 15px;    
+    border-radius: 15px;   /* mantém o visual arredondado */
+    padding: 10px 15px;    /* espaço interno para conforto visual */
 }
 
 form label {
@@ -130,15 +130,15 @@ form label {
     font-family: 'Jura', sans-serif;
     font-size: 20px;
     margin-top: 10px;
-    text-align: right; 
+    text-align: right; /* Alinha o texto à direita */
 }
 
 /* Layout principal */
 .container-fluid {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
-    align-items: flex-start; 
+    align-items: flex-start; /* Melhor alinhamento para dois blocos de tamanhos diferentes */
+    align-items: flex-start; /* Alinha os itens ao topo */
 }
 
 .content-direita {
@@ -146,8 +146,8 @@ form label {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    margin-right: 400px; 
-    text-align: center; 
+    margin-right: 400px; /* Adiciona um afastamento de 200px da margem direita */
+    text-align: center; /* Alinha o texto à esquerda */
 }
 
 
@@ -155,7 +155,7 @@ form label {
 .content-direita img {
     width: 460px;
     height: 360px;
-    margin-bottom: 100px; 
+    margin-bottom: 100px; /* pequeno espaço entre imagem e o texto */
 }
 
 /* Caixa de texto */
@@ -165,124 +165,7 @@ form label {
     color: white;
     font-family: 'Jura', sans-serif;
     font-size: 20px;
-    text-align: left; 
-    width: 460px; 
+    text-align: left; /* alinha o texto para a esquerda */
+    width: 460px; /* opcional: para o texto não ultrapassar a largura da imagem */
     border-radius: 35px;
-}
-
-.mapa-container {
-  position: relative;
-  width: 460px;  /* igual ao seu mapa */
-  height: 360px; /* igual ao seu mapa */
-}
-
-.mapa-container .img-fluid {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.pin-icon {
-  position: absolute;
-  top: 50%; /* Posiciona no meio do mapa */
-  left: 50%; /* Posiciona no meio do mapa */
-  transform: translate(-50%, -50%); /* Centraliza o ícone */
-  width: 30px; /* Definindo o tamanho para 10px */
-  height: 40px; /* Definindo o tamanho para 10px */
-  max-width: 30px; /* Garantindo que o ícone não ultrapasse 10px */
-  max-height: 40px; /* Garantindo que o ícone não ultrapasse 10px */
-}
-
-
-
-
-@media (max-width: 1200px) {
-  .form-container {
-    margin-left: 150px;
-  }
-  
-  .content-direita {
-    margin-right: 150px;
-  }
-}
-
-@media (max-width: 992px) {
-  .container-fluid {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .form-container {
-    margin: 50px 0 0 0;
-    width: 80%;
-  }
-
-  .content-direita {
-    margin: 0;
-    text-align: center;
-  }
-
-  .content-direita img {
-    width: 80%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .content-direita .caixa-texto {
-    width: 80%;
-    padding: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav a {
-    font-size: 20px;
-  }
-
-  .nav-links {
-    gap: 1rem;
-    margin: 0;
-  }
-
-  .logo {
-    height: 30px;
-    margin-top: 20px;
-  }
-
-  .botao-ver {
-    padding: 15px 80px !important;
-    font-size: 20px !important;
-  }
-
-  .form-select {
-    height: 60px;
-    width: 90%;
-    font-size: 20px;
-  }
-
-  form label {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .form-container {
-    padding: 1.5rem;
-  }
-
-  .content-direita .caixa-texto {
-    padding: 20px;
-    font-size: 18px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
 }
