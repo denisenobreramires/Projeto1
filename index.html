@@ -16,18 +16,33 @@
   <header class="hero">
     <div class="hero-bg"></div>
 
-    <nav class="d-flex justify-content-between align-items-center p-4 px-5">
-      <a href="index.html" class="navbar-brand">
-        <img src="imagens/lines-leaning-solid 1.png" alt="Logo Living Around" class="logo">
-      </a>
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.html">
+    <img src="imagens/lines-leaning-solid 1.png" alt="Logo Living Around" class="logo">
+  </a>
+  
+  <!-- Toggler/collapsing button -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="d-flex gap-4 nav-links">
-        <a href="Acomodacao.html" class="text-decoration-none">ACOMODAÇÃO</a>
-        <a href="Locais.html" class="text-decoration-none">LOCAIS</a>
-        <a href="index.html" class="text-decoration-none">BLOG</a>
-        <a href="Contactos.html" class="text-decoration-none">CONTACTOS</a>
-      </div>
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Acomodacao.html">ACOMODAÇÃO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Locais.html">LOCAIS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">BLOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Contactos.html">CONTACTOS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
     <div class="hero-title text-center">
       <h1>LIVING AROUND</h1>
@@ -90,6 +105,7 @@
 
 
 
+
   <!-- LOCAIS -->
 <section class="locais-section">
   <div class="locais-container">
@@ -112,6 +128,8 @@
 
 
 
+
+
 <!-- BLOG -->
 <section class="blog-section">
   <div class="blog-bg"></div>
@@ -121,7 +139,6 @@
     ↑
   </a>
 </section>
-
 
   <!-- FOOTER -->
   <footer class="footer">
